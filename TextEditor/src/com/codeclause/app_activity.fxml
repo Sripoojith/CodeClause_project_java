@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codeclause.Controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="open" mnemonicParsing="false" onAction="#openFile" style="-fx-padding: 0 100 0 0" text="Open" />
+                        <MenuItem fx:id="New" mnemonicParsing="false" onAction="#New" text="New" />
+                        <MenuItem fx:id="save" mnemonicParsing="false" onAction="#save" text="Save" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="print" mnemonicParsing="false" onAction="#print" text="Save As Pdf" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <Menu fx:id="font" mnemonicParsing="false" text="Edit">
+                            <items>
+                                <RadioMenuItem fx:id="small" mnemonicParsing="false" onAction="#fontSize" text="Small ( 14px )" />
+                                <RadioMenuItem fx:id="default" mnemonicParsing="false" onAction="#fontSize" text="Default ( 22px )" />
+                                <RadioMenuItem fx:id="large" mnemonicParsing="false" onAction="#fontSize" text="Large ( 30px )" />
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Info">
+                    <items>
+                        <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" style="-fx-padding: 0 100 0 0" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
